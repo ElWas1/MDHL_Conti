@@ -209,7 +209,6 @@ main.background-contact {
 
 #contact p#p-email {
     padding: 2rem;
-    margin-top: rem;
     background-color: transparent;
 }
 
@@ -239,13 +238,16 @@ main.background-contact {
 main#main-table {
     flex-direction: column;
     gap: 1rem;
+    background-position-x: -25rem;
     background-position-y: 0;
+    min-height: fit-content;
+    max-height: max-content;
 }
 
 table#game-info-table {
     background-color: transparent;
     border: 2px solid black;
-    margin: 0rem 4rem;
+    margin: 0rem 3rem;
     border-collapse: collapse;
     transition-duration: 0.6s;
 }
@@ -275,6 +277,10 @@ span.subrayado {
     flex-direction: column;
 }
 
+div.text-game-info>p {
+    margin: 1rem 0;
+}
+
 #h2-game-info {
     color: white;
     border-radius: 1rem;
@@ -290,6 +296,15 @@ span.subrayado {
 
 .negrita {
     font-weight: bolder;
+}
+
+tfoot td>span.maps-text {
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0 0 0 2rem;
 }
 
 /* ------------------------------------------------------------------
@@ -317,6 +332,14 @@ section#rules-section h2, section#rules-section h3, section#rules-section h4 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+section#rules-section>h2 {
+    margin: .2rem 0;
+}
+
+section#rules-section>h4 {
+    margin: 1rem 0 1.5rem 0;
+}
+
 section#rules-section article, section#rules-section p, section#rules-section ol, section#rules-section ul, section#rules-section li {
     padding: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -327,7 +350,80 @@ span.items-rules {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.numeric-list {
+    list-style-type: decimal;
+}
+
+.letters-list {
+    list-style-type: lower-alpha;
+}
+
 section#rules-section ul {
     list-style-type: circle;
     margin-left: 5rem;
+}
+
+/* ------------------------------------------------------------------
+   ----------------------registration.html---------------------------
+   ------------------------------------------------------------------ */
+
+main#main-registration {
+    justify-content: center;
+    background-position-y: 0;
+}
+
+form#registration-form {
+    margin: 3rem;
+    padding: 1rem;
+    flex-direction: column;
+    height: fit-content;
+    transition-duration: 0.6s;
+}
+
+form#registration-form:hover {
+    background-color: rgba(126, 163, 211, 0.8);
+}
+
+form#registration-form fieldset {
+    padding: 1rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: fit-content;
+}
+
+form#registration-form fieldset, form#registration-form fieldset>fieldset {
+    width: 100%;
+}
+
+form#registration-form input {
+    margin: 0 2rem 0.5rem 0;
+}
+
+form#registration-form input.input-separado {
+    margin: 0 0 0.5rem 1rem;
+}
+
+form#registration-form>fieldset>fieldset>label.label-separado {
+    margin-right: 1rem;
+}
+
+form#registration-form input[type="submit"] {
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid rgb(52, 166, 57);
+    background-color: black;
+    color: white;
+    transition-duration: 0.5s;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-size: large;
+}
+
+form#registration-form input[type="submit"]:hover {
+    background-color: rgb(52, 166, 57);
+}
+
+form#registration-form>fieldset#permission>h3, form#registration-form>fieldset#permission>p  {
+    margin-bottom: 1rem;
 }
